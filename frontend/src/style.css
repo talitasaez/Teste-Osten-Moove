@@ -1,0 +1,15 @@
+.btn {
+    cursor: pointer;
+  }
+  .container {
+    margin-top: 20px;
+  }
+  nav {
+    background-color: rgb(146, 130, 130);
+  }
+  nav a {
+    color: rgb(65, 42, 42);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
