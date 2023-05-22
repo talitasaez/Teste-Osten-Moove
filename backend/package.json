@@ -9,5 +9,19 @@
     "start": "node src/server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.1",
+    "sequelize": "^6.31.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "nodemon src/server.js",
+    "sequelize-cli": "^6.6.0",
+    "ts-node-dev": "^2.0.0"
+  }
 }
