@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Empresas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="#">Registro de Empresas</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div style="margin-bottom: 10px;">
+        <button type="button" class="btn btn-primary" onclick="showAddModal()">Adicionar Empresa</button>
+      </div>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Rua</th>
+              <th>Número</th>
+              <th>Bairro</th>
+              <th>Cidade</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="companyTable">
+          </tbody>
+        </table>
+        <div id="noCompaniesMessage" style="display: none;">Nenhuma empresa encontrada!</div>
+      </div>
+    </div>
+
+    <!-- Modal Adicionar -->
+    <div id="addModal" style="display: none;">
+      <div>
+        <h1>Adicionar Empresa</h1>
+        <label>Nome:</label>
+        <input type="text" id="nameInput">
+        <label>Rua:</label>
+        <input type="text" id="streetInput">
+        <label>Número:</label>
+        <input type="text" id="numberInput">
+        <label>Bairro:</label>
+        <input type="text" id="neighborhoodInput">
+        <label>Cidade:</label>
+        <input type="text" id="cityInput">
+        <label>Estado:</label>
+        <input type="text" id="stateInput">
+        <button type="button" onclick="addCompany()">Adicionar</button>
+        <button type="button" onclick="hideAddModal()">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Modal Editar -->
+    <div id="editModal" style="display: none;">
+      <div>
+        <h1>Editar Empresa</h1>
+        <input type="hidden" id="editCompanyId">
+        <label>Nome:</label>
+        <input type="text" id="editNameInput">
+        <label>Rua:</label>
+        <input type="text" id="editStreetInput">
+        <label>Número:</label>
+        <input type="text" id="editNumberInput">
+        <label>Bairro:</label>
+        <input type="text" id="editNeighborhoodInput">
+        <label>Cidade:</label>
+        <input type="text" id="editCityInput">
+        <label>Estado:</label>
+        <input type="text" id="editStateInput">
+        <button type="button" onclick="updateCompany()">Salvar</button>
+        <button type="button" onclick="hideEditModal()">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Modal Deletar -->
+    <div id="deleteModal" style="display: none;">
+      <div>
+        <h1>Deletar Empresa</h1>
+        <input type="hidden" id="deleteCompanyId">
+        <p>Tem certeza que deseja deletar esta empresa?</p>
+        <button type="button" onclick="deleteCompany()">Sim</button>
+        <button type="button" onclick="hideDeleteModal()">Não</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
