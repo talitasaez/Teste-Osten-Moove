@@ -38,6 +38,5 @@ const CompanyModel = (sequelize, DataTypes) => {
     return Company;
   };
   
-  // const Company = CompanyModel(sequelize, DataTypes);
   
   module.exports = CompanyModel;

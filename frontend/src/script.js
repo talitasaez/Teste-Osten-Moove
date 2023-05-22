@@ -71,7 +71,7 @@
           state: state
         };
       
-        // Aqui vai fazer o fetch para adicionar a empresa
+        
         const response = await fetch('http://localhost:3001/company', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -82,7 +82,7 @@
           const newCompany = await response.json();
           console.log('Nova empresa adicionada:', newCompany);
       
-          getEmpresas(); // Buscar novamente a lista de empresas do servidor
+          getEmpresas(); 
           hideAddModal();
         }
       }
@@ -129,7 +129,6 @@
 
       async function deleteCompany() {
         var id = document.getElementById("deleteCompanyId").value;
-        // Aqui vai fazer o fetch para deletar a empresa
         await fetch(`http://localhost:3001/company/${id}`, {
           method: 'DELETE',
         });

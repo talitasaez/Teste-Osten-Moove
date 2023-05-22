@@ -1,12 +1,12 @@
 
 const { Company } = require('../database/models');
-// retorna todas as empresas 
+
 const getAllCompanies = async (_req, res) => {
   const companies = await Company.findAll();
   return res.status(200).json(companies);
 };
 
-// cria cadastro das empresas 
+
 const createCompany = async (req, res) => {
   const { name, street, number, neighborhood, city, state } = req.body;
 
@@ -26,7 +26,7 @@ const createCompany = async (req, res) => {
   return res.status(201).json(company);
 };
 
-// detalhes da empresa
+
 const getCompanyById = async (req, res) => {
   const { id } = req.params;
 
@@ -39,7 +39,7 @@ const getCompanyById = async (req, res) => {
   return res.status(200).json(company);
 };
 
-//alteracao no cadastro da empresa 
+
 const updateCompany = async (req, res) => {
   const { id } = req.params;
   const { name, street, number, neighborhood, city, state } = req.body;
@@ -67,7 +67,7 @@ const updateCompany = async (req, res) => {
   return res.status(200).json(company);
 };
 
-//deletar empresa 
+
 const deleteCompany = async (req, res) => {
   const { id } = req.params;
 
